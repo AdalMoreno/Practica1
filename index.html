@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Acta de Nacimiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        
+        header {
+            background-color: #611232;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            background-color: #611232;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 5px;
+        }
+        
+        .logo {
+            height: 30px;
+            position: absolute;
+            left: 260px;
+        }
+        
+        #consulta {
+            background-color: white;
+            max-width: 1540px;
+            margin: 0px auto;
+            padding: 90px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .busqueda {
+            position: absolute;
+            top: 50px;
+            left: 260px;
+        }
+        
+        h2 {
+            color: #3d0d0d;
+            font-size: 27px;
+            border-bottom: 5px solid #b49b6e;
+            display: inline-flex;
+        }
+        
+        p {
+            margin-top: 60px;
+            font-size: 18px;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        ul li {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .consulta-container {
+            margin-top: 210px;
+            margin-left: 40px;
+        }
+        
+        .tab {
+            background-color: #f1ebeb;
+            color: #515151;
+            padding: 14px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            margin-left: 150px;
+        }
+        
+        .tab.active {
+            background-color: #611232;
+            color: white;
+            font-size: 16px;
+            margin-left: -4px;
+        }
+        
+        .consulta-table {
+            width: 50%;
+            border: 1px solid #eeeeee;
+            border-collapse: collapse;
+            margin-top: 0px;
+            margin-left: 150px;
+        }
+        
+        .consulta-table td {
+            padding: 14px;
+            border: none;
+        }
+        
+        label {
+            font-weight: bold;
+            display: block;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 2px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        .otras-opciones {
+            margin-top: 20px;
+            margin-left: 150px;
+        }
+        
+        .otras-opciones a {
+            display: block;
+            color: #660000;
+            text-decoration: none;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        
+        .otras-opciones a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: #611232;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="img/Logo.png" alt="" class="logo">
+        </div>
+    </header>
+
+    <section id="consulta">
+
+        <div class="busqueda">
+            <h2>Búsqueda</h2>
+
+            <p>Puedes realizar la búsqueda del acta de nacimiento por cualquiera de estos métodos:</p>
+
+            <ul>
+
+                <li><strong>Con la Clave Única de Registro de Población (CURP).</strong></li>
+                <li><strong>A través de los datos personales.</strong></li>
+            </ul>
+        </div>
+
+        <div class="consulta-container">
+            <button class="tab">Clave Única de Registro de Población</button>
+            <button class="tab active">Datos Personales</button>
+            <form>
+                <table class="consulta-table">
+                    <tr>
+                        <td><label for="nombre">Nombre(s)*</label></td>
+                        <td><input type="text" id="nombre" name="nombre" required></td>
+
+
+                        <td><label for="primer-apellido">Primer Apellido*</label></td>
+                        <td><input type="text" id="primer-apellido" name="primer-apellido" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="segundo-apellido">Segundo Apellido</label></td>
+                        <td><input type="text" id="segundo-apellido" name="segundo-apellido"></td>
+
+                        <td><label for="dia-nacimiento">Día de Nacimiento*</label></td>
+                        <td><select id="dia-nacimiento" name="dia-nacimiento">
+                            <option value="">Selecciona el dia</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mes-nacimiento">Mes de Nacimiento*</label></td>
+                        <td><select id="mes-nacimiento" name="mes-nacimiento">
+                            <option value="">Selecciona el mes</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select></td>
+
+                        <td><label for="anio-nacimiento">Año de Nacimiento*</label></td>
+                        <td><input type="text" id="anio-nacimiento" name="anio-nacimiento" placeholder="Ej. 1990"></td>
+                    </tr>
+
+                    </tr>
+                    <tr>
+                        <td><label for="sexo">Sexo*</label></td>
+                        <td><select id="sexo" name="sexo">
+                            <option value="">Selecciona el sexo</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select></td>
+
+                        <td><label for="estado">Estado*</label></td>
+                        <td><select id="estado" name="estado">
+                            <option value="">Selecciona el estado</option>
+                            <option value="AGU">Aguascalientes</option>
+                            <option value="BCN">Baja California</option>
+                            <option value="BCS">Baja California Sur</option>
+                            <option value="CAM">Campeche</option>
+                            <option value="CHP">Chiapas</option>
+                            <option value="CHH">Chihuahua</option>
+                            <option value="COA">Coahuila</option>
+                            <option value="COL">Colima</option>
+                            <option value="DUR">Durango</option>
+                            <option value="GTO">Guanajuato</option>
+                            <option value="GRO">Guerrero</option>
+                            <option value="HGO">Hidalgo</option>
+                            <option value="JAL">Jalisco</option>
+                            <option value="MEX">México</option>
+                            <option value="MICH">Michoacán</option>
+                            <option value="MORE">Morelos</option>
+                            <option value="NAY">Nayarit</option>
+                            <option value="NL">Nuevo León</option>
+                            <option value="OAX">Oaxaca</option>
+                            <option value="PUE">Puebla</option>
+                            <option value="QRO">Querétaro</option>
+                            <option value="QR">Quintana Roo</option>
+                            <option value="SLP">San Luis Potosí</option>
+                            <option value="SIN">Sinaloa</option>
+                            <option value="SON">Sonora</option>
+                            <option value="TAB">Tabasco</option>
+                            <option value="TAMPS">Tamaulipas</option>
+                            <option value="TLAX">Tlaxcala</option>
+                            <option value="VER">Veracruz</option>
+                            <option value="YUC">Yucatán</option>
+                            <option value="ZAC">Zacatecas</option>
+                        </select></td>
+                    </tr>
+                </table>
+            </form>
+
+            <div class="otras-opciones">
+                <a href="#">Consulta el estatus de pago de tu acta de nacimiento</a>
+                <a href="#">Consulta la validez de tu acta de nacimiento</a>
+                <a href="#">Consulta costos por entidad federativa</a>
+                <a href="#">Preguntas frecuentes</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gobierno de México - Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>
